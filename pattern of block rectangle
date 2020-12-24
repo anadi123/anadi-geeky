@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+void star(int row,int column)
+{
+	for(int i=0;i<row;i++)
+	{
+		for(int j=0;j<column;j++)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	//return 0;
+}
+int main()
+{
+	int row,column;
+	cout<<"Kripya rows and column ki sankhya bharrein\n";
+	cin>>row>>column;
+	star(row,column);
+	return 0;
+}
