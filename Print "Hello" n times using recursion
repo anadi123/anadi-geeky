@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int x=0;
+int main()
+{	
+	if(x==5)
+	{
+		return 0;
+	}
+	else
+		x++;	
+		cout<<x<<"Hello"<<"\n";
+		main();
+	return 0;
+}
