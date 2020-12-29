@@ -1,0 +1,47 @@
+// Write your code here
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n,p,q,temp,count;
+    cin>>t;
+    while(t--)
+    {
+         //Make a array of size n
+        cin>>n;
+        bool question[n];
+        //make all false initially
+        for(int i=0;i<n;i++)
+            question[i]=false;
+ // while input put corresponding array element=true
+ //Q1 means 0 index , Q2 means 1 index and so on
+        cin>>p;
+        for(int i=0;i<p;i++)
+        {
+            cin>>temp;
+            question[temp-1]=true;
+        }
+
+        //repeat this stuff for your friend
+    cin>>q;
+        for(int i=0;i<q;i++)
+        {
+            cin>>temp;
+            question[temp-1]=true;
+        }
+        count=0;
+        //now count the number of true
+        for(int i=0;i<n;i++)
+            {
+                 if(question[i]==true)
+                    count++;
+            }
+    //if count==n then it means all questions attempted
+        if(count==n)
+            cout<<"YES"<<'\n';
+        else    
+            cout<<"NO"<<'\n';
+    } 
+    return 0;
+}
+    
