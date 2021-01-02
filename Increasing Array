@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a,b[100100],count=0;
+	cin>>a;
+	for(int i=0;i<a;i++)
+	{
+		cin>>b[i];
+	}
+	for(int i=1;i<a;i++)
+	{
+		while(b[i-1]>b[i])
+			{
+				b[i]++;
+				count++;
+				
+			}
+		
+	}
+	cout<<count;
+	return 0;
+	
+}
