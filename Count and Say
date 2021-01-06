@@ -1,0 +1,20 @@
+class Solution {
+public:
+    string countAndSay(int n) {
+        if(n==1)return "1";
+        string temp = countAndSay(n-1);
+        string ans = "";
+        for(int i=0; i<temp.length();){
+            int count = 1;
+            char curr = temp[i];
+            i++;
+            while(i<temp.length()&&temp[i]==curr){
+                i++;
+                count++;
+            }
+            ans = ans + (char)(count+48) + curr;
+        }
+        return ans;
+    }
+};
+    
