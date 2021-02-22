@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int num,a[10001];
+	bool answer=true;
+	cin >> num;	
+	for(int i=0;i<num;i++)
+		cin>>a[i];	
+	for(int i=0;i<num-1;i++) //till second last element
+	{
+		while(a[i]>0)
+		{
+			a[i]--;
+			a[i+1]--;
+		}
+		//now a[i] must be 0 lets check a[i+1]
+		if(a[i+1]<0)
+		{
+			answer=false;
+		}
+		//else mein repeat the above steps
+	}					
+	//we are still left to check a[num-1]==0 or not
+	//even if we got a[i+1]<0 before then also we set to
+	//false only so the if below will not affect.
+	if(a[num-1]!=0) 
+		answer=false;
+	// if answer==true then we made all elements 0
+	if(answer==true)
+		cout<<"YES";
+	else
+		cout<<"NO";
+	return 0;
+}
